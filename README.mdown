@@ -1,0 +1,17 @@
+# InstaNormal
+
+## Wat Is This?
+
+This is a Chrome extension that normalizes Instagram's website so that the modals and individual pages with big images on them allow you to click, drag, and save them.  Normally Instagram injects the images as a background to a div or span so if you want the image, you have to go through the web inspector and figure out where it is and do whatever you want with it.
+
+## Why?
+
+I needed to be able to quickly export some Instagram images to Google Image Search and the existing site isn't really condusive to doing that.
+
+## Contributing
+
+I know it's probably buggy.  I'll take pull requests.
+
+## License
+
+This is for personal use only.  You cannot redistribute this plugin as your own.  I don't want to see it in the Google Chrome App Store before I've had a chance to put it there myself.  Thanks for understanding.
