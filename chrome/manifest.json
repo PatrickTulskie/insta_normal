@@ -1,0 +1,17 @@
+{
+  "content_scripts": [
+    {
+      "js": [
+        "insta_normalizer.js",
+        "chrome_loader.js"
+      ], 
+      "matches": [
+        "http://instagram.com/*"
+      ]
+    }
+  ], 
+  "description": "Normalize the images on Instagram pages so you can save them and pass them to other extensions.", 
+  "name": "InstaNormal",
+  "version": "1.0",
+  "manifest_version": 2
+}
