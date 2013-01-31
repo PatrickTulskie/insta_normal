@@ -17,7 +17,8 @@ function loadInstaNormalizer() {
   function normalizeStandaloneImagePages() {
     $.each($('.media-photo span.img'), function(index, item) {
       image = $(item).css("background-image").match(/url\((.*)\)/)[1];
-      $(item).parent().html("<img src='" + image + "' style='visibility:visible' />");
+      $(item).parent().prepend("<img src='" + image + "' style='visibility:visible' />");
+      $(item).css('display', 'none');
     });
   }
   
