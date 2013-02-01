@@ -1,0 +1,9 @@
+#!/bin/bash
+
+project_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../" && pwd )"
+
+echo "Updating Chrome's copy"
+cp -f $project_directory/base/insta_normalizer.js $project_directory/chrome/insta_normalizer.js
+
+echo "Updating Safari's copy"
+cp -f $project_directory/base/insta_normalizer.js $project_directory/safari/InstaNormal.safariextension/insta_normalizer.js
