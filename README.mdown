@@ -2,15 +2,23 @@
 
 ## Wat Is This?
 
-This is a Chrome extension that normalizes Instagram's website so that the modals and individual pages with big images on them allow you to click, drag, and save them.  Normally Instagram injects the images as a background to a div or span so if you want the image, you have to go through the web inspector and figure out where it is and do whatever you want with it.
+This is a browser extension that normalizes Instagram's website so that the modals and individual pages with big images on them allow you to click, drag, and save them.  Normally Instagram injects the images as a background to a div or span so if you want the image, you have to go through the web inspector and figure out where it is and do whatever you want with it.
+
+I wrote it for Chrome and then ported it to Safari.  It will eventually be a plugin I distribute.
 
 ## Why?
 
 I needed to be able to quickly export some Instagram images to Google Image Search and the existing site isn't really condusive to doing that.
 
+## Running This Buggy Thing
+
+Pull down a copy of the repo, run `script/update` and then load up the respective plugins for Chrome or Safari.
+
 ## Contributing
 
 I know it's probably buggy.  I'll take pull requests.
+
+If you want to hack on the main script, just work on `base/insta_normalizer.js` and then use `script/update` when you're done.
 
 ## License
 
