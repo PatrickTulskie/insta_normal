@@ -2,28 +2,21 @@ function loadInstaNormalizer() {
   // Call this to inject the functions and loader into the page.
   // Nested the other functions in here so that they all get injected properly.
   
+  var imagePath = "div.Image.iLoaded.iWithTransition.Frame:visible";
+  
   function normalizeGalleryModals() {
-    $("html").live("click", function() {
-      $.each($("#profile-media-modal .imgImg.image"), function(index, item) {
-        image = $(item).css("background-image").match(/url\((.*)\)/)[1];
-        
+    $(imagePath).live({
+      mousemove: function() {
+        image = $(this).css("background-image").match(/url\((.*)\)/)[1];
+      
         $('.normalizer_injected_image').remove();
-        $(item).parent().prepend("<img src='" + image + "' style='visibility:visible; display:block;' class='normalizer_injected_image' />");
-        $(item).css('display', 'none');
-      });
-    });
+        $(this).parent().prepend("<img src='" + image + "' style='visibility:visible; display:block; width: 100%;' class='normalizer_injected_image' />");
+        $(this).css('display', 'none');
+      }
+    })
   }
 
-  function normalizeStandaloneImagePages() {
-    $.each($('.media-photo span.img'), function(index, item) {
-      image = $(item).css("background-image").match(/url\((.*)\)/)[1];
-      $(item).parent().prepend("<img src='" + image + "' style='visibility:visible' />");
-      $(item).css('display', 'none');
-    });
-  }
-  
   $(function() {
     normalizeGalleryModals();
-    normalizeStandaloneImagePages();
   });
 }
